@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 0
+    # NOTE: limit is 0 because this repo's policy is "no PRs" (personal-site-deployer Rule 1).
+    # Dependabot will still surface security alerts via the Security tab; updates must be
+    # applied manually by shad-gc with a direct push to main.
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 0
