@@ -1,0 +1,81 @@
+:root {
+  --bg: #000000;
+  --text: #dce7ef;
+  --text-muted: rgb(220 231 239 / 0.72);
+  --text-faint: rgb(220 231 239 / 0.5);
+  --link-hover: #ffffff;
+}
+
+body {
+  color: var(--text);
+  background: var(--bg);
+}
+
+.page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: start center;
+  padding: clamp(5.5rem, 12vh, 8rem) 1.5rem 3rem;
+}
+
+.link-card {
+  width: min(100%, 26rem);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2vw + 1.5rem, 2.75rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.role {
+  margin: 0.95rem 0 2.35rem;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 0.45vw + 0.9rem, 1.2rem);
+  line-height: 1.5;
+}
+
+nav {
+  display: grid;
+  gap: 1.35rem;
+}
+
+a {
+  width: fit-content;
+  color: var(--text);
+  font-size: clamp(1.15rem, 0.55vw + 1rem, 1.45rem);
+  line-height: 1.25;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+  transition:
+    color 140ms ease,
+    opacity 140ms ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.pending {
+  color: var(--text-faint);
+  cursor: not-allowed;
+  text-decoration-style: dotted;
+}
+
+.pending:hover {
+  color: var(--text-faint);
+}
+
+@media (width <= 40rem) {
+  .page {
+    place-items: start;
+    padding-block-start: 4.5rem;
+  }
+
+  .link-card {
+    width: min(100%, 22rem);
+  }
+}
