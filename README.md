@@ -1,6 +1,8 @@
 # shad-home
 
-Minimal personal homepage for Rashad Hussain.
+Minimal personal homepage.
+
+Live at [rashadhussain.com](https://rashadhussain.com).
 
 ## Links
 
